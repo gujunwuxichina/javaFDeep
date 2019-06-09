@@ -1,4 +1,4 @@
-package com.gujun.se;
+package com.gujun.enumTest;
 
 public enum SeasonEnum {
 

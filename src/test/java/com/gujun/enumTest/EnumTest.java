@@ -1,4 +1,4 @@
-package com.gujun.se;
+package com.gujun.enumTest;
 
 import org.junit.Test;
 

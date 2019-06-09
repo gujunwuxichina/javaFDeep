@@ -1,4 +1,4 @@
-package com.gujun.se;
+package com.gujun.array;
 
 import org.junit.Test;
 
@@ -75,7 +75,7 @@ public class ArrayInCrazyJava {
     @Test
     public void test03(){
         Integer[] ints=new Integer[5];
-        System.out.println(ints[0]);
+        System.out.println(ints[0]);    //null
     }
 
 }

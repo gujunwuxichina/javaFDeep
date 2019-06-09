@@ -1,4 +1,4 @@
-package com.gujun.se;
+package com.gujun.GC;
 
 /**
  * @ClassName gu
@@ -43,5 +43,6 @@ public class CleanObject {
     //垃圾回收器工作：
     //一些其他语言在堆上分配对象代价高，但是Java在堆上分配内存的速度可以和一些其他语言在栈上分配速度相媲美；
     //这是由于垃圾回收器能提高对象的创建速度，存储空间的释放会影响存储空间的分配，这是某些Java虚拟机的工作方式；
+
 
 }
