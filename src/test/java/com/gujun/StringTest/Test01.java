@@ -22,7 +22,6 @@ public class Test01 {
         System.out.println(s1==s2);
         System.out.println(System.identityHashCode(s1));
         System.out.println(System.identityHashCode(s2));
-        System.out.println(123);
     }
 
 }
