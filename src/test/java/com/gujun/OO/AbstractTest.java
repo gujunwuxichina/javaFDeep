@@ -7,7 +7,7 @@ package com.gujun.OO;
  * @Date 2019/6/26 6:52
  * @Version 1.0
  **/
-public class AbstractClass {
+public class AbstractTest {
 
     //抽象类
     //抽象类可以没有抽象方法，可以有构造器，但不能用来创建实例，而是被其子类调用；
