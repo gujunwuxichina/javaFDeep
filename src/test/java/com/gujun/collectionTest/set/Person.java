@@ -46,6 +46,7 @@ public class Person {
 
     @Override
     public boolean equals(Object o) {
+        System.out.println("equal()");
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
