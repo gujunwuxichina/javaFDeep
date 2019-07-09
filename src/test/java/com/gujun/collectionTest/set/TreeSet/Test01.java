@@ -28,12 +28,24 @@ public class Test01 {
     //如果希望TreeSet运行正常，则只能添加同一类型的对象；
     //添加对象时，如果两个对象通过compareTo()相等，则新对象无法添加到TreeSet中；
     @Test
-    public void test01(){
-        SortedSet<Integer> sortedSet=new TreeSet<>();
-        sortedSet.add(1);sortedSet.add(2);
+    public void test01() {
+        SortedSet<Integer> sortedSet = new TreeSet<>();   //Integer类实现了Comparable接口；
+        sortedSet.add(1);
+        sortedSet.add(2);
         System.out.println(sortedSet.add(2));   //false，添加失败
     }
     //对于添加到TreeSet中的对象的类，要满足其equal()和compareTo()一致，即equal()返回true时，compareTo()返回0;
     //2.定制排序
-
+    //需要在创建TreeSet对象时，许通过Comparator接口，即传入一个Comparator对象作为TreeSet构造器的参数；
+    //由于Comparator是函数式接口，可以用lambda来代替匿名类；
+    @Test
+    public void test02(){
+        SortedSet<Student> students=new TreeSet<>((s1,s2)->{
+            return s1.getAge()>s2.getAge()?1:s1.getAge()<s2.getAge()?-1:0;   //按年龄升序排列，若返回0则不会添加
+        });
+        students.add(new Student("li",22));
+        students.add(new Student("wang",18));
+        students.add(new Student("zhang",27));
+        System.out.println(students);
+    }
 }
