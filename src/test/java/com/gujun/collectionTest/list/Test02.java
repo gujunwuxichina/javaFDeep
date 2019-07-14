@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -34,12 +35,17 @@ public class Test02 {
 
     //固定长度List
     //Arrays.asList(...)，该方法返回的List集合既不是ArrayList也不是Vector，而是Arrays的内部类ArrayList的实例；
-    //Arrays.ArrayList是一个固定长度的List，只能遍历，不能增删；
+    //Arrays.ArrayList是一个固定长度的List，只能遍历,底层是数组,不能增删，修改可以；
     @Test
     public void test01(){
         List<String> list= Arrays.asList("gujun","java","javascript");
         System.out.println(list instanceof ArrayList);  //false
         System.out.println(list.getClass());   // class java.util.Arrays$ArrayList
+        System.out.println(list);
+        Collections.swap(list,1,2);
+        System.out.println(list);
+        Collections.replaceAll(list,"gujun","gj");
+        System.out.println(list);
     }
 
 }

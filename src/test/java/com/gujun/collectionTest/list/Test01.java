@@ -68,5 +68,6 @@ public class Test01 {
         }
     }
 
+    //List判断两个对象相等的标准是——只需通过equal()返回true即可；
 
 }
