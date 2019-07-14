@@ -1,7 +1,11 @@
 package com.gujun.collectionTest.Map;
 
+import com.gujun.collectionTest.set.EnumSet.Season;
 import org.junit.Test;
 
+import java.util.EnumMap;
+import java.util.IdentityHashMap;
+import java.util.Map;
 import java.util.TreeMap;
 
 /**
@@ -35,4 +39,29 @@ public class Test02 {
     //而WeakHashMap的key只保留对象的弱引用，则key所引用的对象可能会被垃圾回收掉，WeakHashMap也可能自动删除这样key所引用的对象；
     //当垃圾回收key所引用的对象，WeakHashMap会自动删除key对应的key-value对；
 
+    //IdentityHashMap实现类
+    //与HashMap基本相似；但在处理key相等时不同，IdentitHashMap仅当key严格相等时才相等；也允许null作为key;
+    //不保证key-value对顺序；
+    @Test
+    public void test02(){
+        Map<String,String> map=new IdentityHashMap<>();
+        map.put(new String("javascript"),"80");
+        map.put(new String("javascript"),"100");
+        map.put("java","60");
+        map.put("java","70");
+        System.out.println(map);
+    }
+
+    //EnumMap实现类；
+    //EnumMap中所有key都必须是单个枚举类的枚举值；
+    //创建EnumMap时必须显示或隐式指定对应的枚举类；
+    //不允许null作为key，但null可以作为value;
+    @Test
+    public void test03(){
+        Map<Season,String> map=new EnumMap<>(Season.class);
+        map.put(Season.SPRING,"春天");
+        map.put(Season.SUMMER,"夏天");
+        System.out.println(map);
+    }
 }
+
