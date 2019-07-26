@@ -1,5 +1,7 @@
 package com.gujun.genericity;
 
+import org.junit.Test;
+
 /**
  * @ClassName gu
  * @Description TODO
@@ -20,6 +22,16 @@ public class Test02 {
     //设定类型形参上限；
     //也可以是设定多个上限，最多一个父类上限，多个接口上限 如<T extends 父类 & 接口..>；
 
-    //泛型方法，类型形参放在修饰符或返回值类型之间；
+    //泛型方法，类型形参放在修饰符或返回值类型之间;
+    //泛型方法和类型通配符的区别：
+    //大多数情况都可以使用泛型方法类替代类型通配符；
+
+    //泛型构造器：
+    //一旦定义泛型构造器，不仅可以让Java根据实现参数类型来推断类型形参类型，还可以在调用构造器时显示指定实际类型；
+    @Test
+    public void test01(){
+        new Good("gujun");
+        new <Integer> Good(22);
+    }
 
 }
