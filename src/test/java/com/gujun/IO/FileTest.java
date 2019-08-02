@@ -2,6 +2,8 @@ package com.gujun.IO;
 
 import org.junit.Test;
 
+import java.io.File;
+
 /**
  * @ClassName gu
  * @Description TODO
@@ -31,6 +33,30 @@ public class FileTest {
     @Test
     public void test01() {
         System.out.println(System.getProperty("user.dir"));
+        //以当前路径来创建一个File对象；
+        File file1=new File(".");
+        System.out.println(file1.getName());    //获取文件名，输出一.
+        System.out.println(file1.getAbsolutePath());
+        System.out.println(file1.getParent());  //null
+        System.out.println(file1.getAbsoluteFile());
+        System.out.println(file1.getAbsoluteFile().getParent());
+        for(File root:File.listRoots()){
+            System.out.println(root);
+        }
+    }
+    //文件过滤器
+    //File的实例方法list()可以接受一个FilenameFilter参数，FilenameFilter接口里只包含一个accept(File,String)，
+    //该方法依次对指定File的所有子目录或文件进行迭代，若返回true,则list()会列出该子目录或文件；
+    @Test
+    public void test02(){
+        File file=new File(".");
+        for(String s:file.list()){
+            System.out.println(s);
+        }
+        System.out.println("====================");
+        for(String s:file.list((file1,name)->{return name.endsWith("ini");})){
+            System.out.println(s);
+        }
     }
 
 }
