@@ -28,7 +28,7 @@ public class Test01 {
     //Java集合概述
     //集合类是一种特别有用的工具类，一种容器，可以存放多个对象，实际上是对象的引用；
     //编程时常常需要集中存放多个数据，可以用数组，但是长度不可变化，此外数组也无法保存具有映射关系的数据；
-    //Java的集合类主要由两个根接口派生而来；
+    //Java的集合类主要由两个根接口Collection和Map派生而来；
 
     //Collection接口和Iterator接口：
     //Collection接口是List、Set、Queue接口的父接口，所以Collection接口里的方法List、Set、Queue都可以用；
