@@ -20,7 +20,6 @@ public class Apple<T> {
     }
 
     //构造器还是原来的类名，不需要增加泛型声明；调用构造器时还是要带<>；
-
     public Apple() {
     }
 

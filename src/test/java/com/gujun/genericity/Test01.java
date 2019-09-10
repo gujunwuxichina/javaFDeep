@@ -37,7 +37,8 @@ public class Test01 {
         List<Integer> list2=new ArrayList<>();
         System.out.println(list1.getClass()==list2.getClass()); //true
         //依然被当成同一个类，在内存中占用同一块内存；
-        //因此在静态方法、静态初始化块或静态成员成员和初始化中不能使用类型形参；
+        //因此在静态方法、静态初始化块或静态成员成员和初始化中不能使用类型形参；✳
+        //由于系统中并不会真正生成泛型类，所以instanceof后不能使用泛型类；
     }
 
 }
