@@ -11,9 +11,8 @@ import java.util.Collection;
  **/
 public class Test03 {
 
-    //设定通配符下限
+    //设定通配符下限:<? super T>,表示通配符必须是T本身或其父类；
     //有这么一个需求，实现将集合src的元素复制到dest集合里，并返回最后一个被复制的元素；
-    //<? super T>表示它必须是T本身或其父类；
 
     public static <T> T copy(Collection<? super T> dest,Collection<T> src){
         T last=null;
@@ -26,7 +25,7 @@ public class Test03 {
 
     //泛型和数组
     //Java泛型的一个重要原则：如果一段代码在编译时没有出现未经检查的转换警告，则程序在运行时不会引发ClassCastException；
-    //所以数组元素的类型不能包含类型变量或类型形参，
+    //所以数组元素的类型不能包含类型变量或类型形参，除非是无上限的类型通配符；
     //HH
 
 }
