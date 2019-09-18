@@ -15,7 +15,7 @@ public class Client {
 //          Socket socket=new Socket("127.0.0.1",3000);
             Socket socket=new Socket();
             SocketAddress socketAddress=new InetSocketAddress("127.0.0.1",3000);
-            socket.connect(socketAddress,10000);
+            socket.connect(socketAddress,10000);       //设置超时时间
             BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(socket.getInputStream()));
             System.out.println(bufferedReader.readLine());
             bufferedReader.close();
