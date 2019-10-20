@@ -53,4 +53,11 @@ public class DateTest {
     //采用延迟修改的优势是在多次调用set()不会触发多次不必要的计算，即计算出一个代表时间的long整数；
     //HH
 
+    @Test
+    public void test03(){
+        Calendar calendar=Calendar.getInstance();
+        System.out.println(calendar.getTime());
+        System.out.println(calendar.get(Calendar.MINUTE));
+    }
+
 }
