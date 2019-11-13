@@ -1,5 +1,7 @@
 package com.gujun.basicClass;
 
+import org.junit.Test;
+
 /**
  * @ClassName gu
  * @Description TODO
@@ -31,5 +33,11 @@ public class StringTest {
     //length，capacity属性，length是字符串序列长度，capacity是容量，通常比length大；
     //length的值可以改变，setLength(int)；
     //append()、insert()、reverse()等；
+
+    @Test
+    public void test01(){
+        String s="+gujun";
+        System.out.println(s.substring(1));
+    }
 
 }
