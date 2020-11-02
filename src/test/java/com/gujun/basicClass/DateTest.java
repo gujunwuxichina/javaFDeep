@@ -60,4 +60,11 @@ public class DateTest {
         System.out.println(calendar.get(Calendar.MINUTE));
     }
 
+    @Test
+    public void test04(){
+        Calendar calendar=Calendar.getInstance();
+        System.out.println(String.valueOf(calendar.get(1)).substring(2));
+        System.out.println(String.format("%02d",calendar.get(2)+1 ));
+    }
+
 }

@@ -23,6 +23,7 @@ public class BigPlaneInvocationHandler implements InvocationHandler {
         System.out.println("起飞");
         Object result=method.invoke(target,args);
         System.out.println("降落");
+        System.out.println(result);
         return result;
     }
 
