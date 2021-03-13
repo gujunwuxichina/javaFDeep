@@ -36,8 +36,8 @@ public class StringTest {
 
     @Test
     public void test01(){
-        String s="+gujun";
-        System.out.println(s.substring(1));
+        String s=" 63.83287671232877";
+        System.out.println(s.substring(0,s.indexOf(".")));
     }
 
 }

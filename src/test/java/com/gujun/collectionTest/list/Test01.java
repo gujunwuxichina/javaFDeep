@@ -2,9 +2,7 @@ package com.gujun.collectionTest.list;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 /**
  * @ClassName gu
@@ -14,6 +12,14 @@ import java.util.ListIterator;
  * @Version 1.0
  **/
 public class Test01 {
+
+    private static Collection<String> collection=new HashSet<>();
+
+    static {
+        collection.add("gujun");
+        collection.add("wuxi");
+        collection.add("java");
+    }
 
     //List是有序集合，在Collection接口的基础上增加了一些根据索引来操作集合元素的方法：
     //void add(index,obj);boolean addAll(index,collection)；
@@ -52,7 +58,7 @@ public class Test01 {
     @Test
     public void test03(){
         String[] strings={"gj","wuxi","java"};
-        List<String> list=new ArrayList<>();
+        List<String> list=new ArrayList<>(); 
         for(int i=0,j=strings.length;i<j;i++){
             list.add(strings[i]);
         }
@@ -69,5 +75,16 @@ public class Test01 {
     }
 
     //List判断两个对象相等的标准是——只需通过equal()返回true即可；
+
+    @Test
+    public void test04(){
+        collection.forEach(s -> {
+            if(s.equals("wuxi")){
+                return;
+            }
+            System.out.println(s);
+        });
+        System.out.println(22);
+    }
 
 }

@@ -19,7 +19,7 @@ public class CacheImmutable {
 
     public CacheImmutable(String name) {   //是否需要隐藏构造器取决于系统需求；此处public则使用new会产生最新的对象，valueOf()会先从缓存数组中取；
         this.name = name;
-    }
+    }   //通过构造器产生的实例不会缓存
 
     public String getName() {
         return name;

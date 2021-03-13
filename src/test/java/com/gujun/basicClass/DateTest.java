@@ -2,7 +2,13 @@ package com.gujun.basicClass;
 
 import org.junit.Test;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * @ClassName gu
@@ -65,6 +71,23 @@ public class DateTest {
         Calendar calendar=Calendar.getInstance();
         System.out.println(String.valueOf(calendar.get(1)).substring(2));
         System.out.println(String.format("%02d",calendar.get(2)+1 ));
+    }
+
+    @Test
+    public void test05() throws ParseException {
+        Calendar calendar1=Calendar.getInstance();
+        System.out.println(calendar1.toString());
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(simpleDateFormat.format(new Date()));
+//        System.out.println(simpleDateFormat.parse("2021-03-06"));
+    }
+
+    @Test
+    public void test06(){
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime localDateTime=LocalDateTime.parse(simpleDateFormat.format(new Date()),formatter);
+        System.out.println(localDateTime.toString());
     }
 
 }

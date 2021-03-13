@@ -7,7 +7,7 @@ package com.gujun.OO;
  * @Date 2019/6/26 15:00
  * @Version 1.0
  **/
-public class ProgrammingToInterface {
+public class  ProgrammingToInterface {
 
     //面向接口编程
     //通过面向接口编程可以降低程序的耦合；

@@ -43,13 +43,16 @@ public class Test01 {
     //当调用forEach()时，会依次将集合元素传给Consumer的accept(t)；
     @Test
     public void test01(){
-        collection.forEach(s-> System.out.println(s));  //lambda写法
-        collection.forEach(new Consumer<String>() { //匿名类写法
-            @Override
-            public void accept(String s) {
+        collection.forEach(s-> {
                 System.out.println(s);
             }
-        });
+        );  //lambda写法
+//        collection.forEach(new Consumer<String>() { //匿名类写法
+//            @Override
+//            public void accept(String s) {
+//                System.out.println(s);
+//            }
+//        });
     }
     //2.使用Iterator遍历集合元素：
     //Iterator接口是Java集合框架的成员；Iterator主要用于遍历集合元素；也被称为迭代器；
@@ -75,7 +78,8 @@ public class Test01 {
     @Test
     public void test03(){
         Iterator<String> iterator=collection.iterator();
-        iterator.forEachRemaining(s-> System.out.println(s));
+        iterator.forEachRemaining(s->
+                System.out.println(s));
     }
     //4.使用foreach循环遍历集合元素
     @Test

@@ -2,7 +2,7 @@ package com.gujun.OO;
 
 /**
  * @ClassName gu
- * @Description TODO
+ * @Description 成员变量为引用类型的不可变类的实现
  * @Author GuJun
  * @Date 2019/6/24 16:34
  * @Version 1.0
