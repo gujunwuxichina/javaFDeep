@@ -90,4 +90,9 @@ public class DateTest {
         System.out.println(localDateTime.toString());
     }
 
+    @Test
+    public void test07(){
+        System.out.println(LocalDateTime.now().format( DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+    }
+
 }

@@ -16,4 +16,16 @@ public class Test01 {
         new TestClass();
     }
 
+    @Test
+    public void test02(){
+        Integer integer=10;
+        System.out.println(integer>0);
+    }
+
+    @Test
+    public void test03(){
+        String s="pageForAr";
+        System.out.println(s.endsWith("Ar"));
+    }
+
 }

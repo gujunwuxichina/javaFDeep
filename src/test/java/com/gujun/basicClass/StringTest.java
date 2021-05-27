@@ -1,6 +1,10 @@
 package com.gujun.basicClass;
 
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
+
+import java.util.UUID;
 
 /**
  * @ClassName gu
@@ -38,6 +42,21 @@ public class StringTest {
     public void test01(){
         String s=" 63.83287671232877";
         System.out.println(s.substring(0,s.indexOf(".")));
+        System.out.println(s.substring(s.lastIndexOf(".")+1));
+        System.out.println();
+    }
+
+    @Test
+    public void test02(){
+        String s="[12,22]";
+        System.out.println(new StringBuilder(s).substring(1,6));
+    }
+
+    @Test
+    public void testUUID(){
+        System.out.println(UUID.randomUUID().toString().replaceAll("-",""));
+        System.out.println(RandomStringUtils.random(30));
+        System.out.println(com.gujun.utils.UUID.fastUUID().toString(true));
     }
 
 }
