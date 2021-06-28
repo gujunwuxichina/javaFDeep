@@ -13,7 +13,7 @@ public class Test01 {
 
     @Test
     public void test01(){
-        new TestClass();
+        new com.gujun.test.TestClass();
     }
 
     @Test
