@@ -23,6 +23,13 @@ public class Test05 {
     //  接口里也可以定义内部类，默认使用public static修饰；
 
     //  使用内部类
-    //
+    //  在外部类以外使用内部类
+    //  OutClass.InnerClass name
+    //  非静态内部类  =outerInstance.new InnerClass();
+    //  静态内部类   =new OutClass.InnerClass();
+
+    //  局部内部类
+    //  如果把一个内部类放在方法里定义，就是局部内部类，仅在方法里有效
+    //  很少用到
 
 }
