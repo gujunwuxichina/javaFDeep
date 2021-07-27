@@ -1,5 +1,9 @@
 package com.gujun.ultimate.basic;
 
+import org.junit.Test;
+
+import java.util.Objects;
+
 /**
  * @ClassName: TestObject
  * @Author GuJun
@@ -24,5 +28,11 @@ public class TestObject {
     //  o=Objects.requireNonNull(o);
 
     //  String
+
+    @Test
+    public void test01(){
+        String s=null;
+        System.out.println(Objects.isNull(s)?"null":s.toString());
+    }
 
 }

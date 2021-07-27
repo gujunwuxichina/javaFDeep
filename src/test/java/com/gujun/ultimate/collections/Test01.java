@@ -58,4 +58,14 @@ public class Test01 {
     //  有状态方法，会给流增加一些新属性；
     //  短路方法，会尽早结束对流的操作，不必检查所有元素；
 
+    @Test
+    public void test02(){
+        collection.forEach(c->{
+            System.out.println(c);
+            if(c.equals("python")){
+                return;
+            }
+        });
+    }
+
 }
