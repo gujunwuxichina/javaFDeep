@@ -51,6 +51,14 @@
       <version>1.2.75</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.20</version>
+      <scope>provided</scope>
+    </dependency>
+
+
   </dependencies>
 
   <build>
@@ -93,7 +101,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>4.0.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
