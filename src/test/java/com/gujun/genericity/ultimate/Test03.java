@@ -17,6 +17,10 @@ public class Test03 {
     //  如：public <T> Foo(T t),new Foo("text") , new <String> Foo("text");
 
     //  设定通配符下限
+    //  <? super Type>,表示其本身必须是Type或Type的父类；
 
+    //  泛型方法和方法重载
+
+    //  HHH
 
 }
