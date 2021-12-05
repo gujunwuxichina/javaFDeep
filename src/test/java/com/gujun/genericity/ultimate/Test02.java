@@ -2,6 +2,8 @@ package com.gujun.genericity.ultimate;
 
 import org.junit.Test;
 
+import java.util.Objects;
+
 /**
  * @ClassName: Test02
  * @Author GuJun

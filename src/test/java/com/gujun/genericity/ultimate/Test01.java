@@ -25,7 +25,7 @@ public class Test01 {
     //  当使用这写接口、父类时不能再包含类型形参；
     //  与调用方法不同，调用接口/父类时也可以不为类型形参传入实际的类型形参,以下都是准确的：
     /*
-     *  public class A extends Apple    //  这个会发出警告
+       *  public class A extends Apple    //  这个会发出警告
      *  public class B extends Apple<String>
      */
     //  不存在泛型类，不管为泛型的类型形参传入哪种实参，都会被当成同一类处理，在内存中占用同一块内存；
