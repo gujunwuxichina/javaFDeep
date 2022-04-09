@@ -1,4 +1,4 @@
-package com.gujun.effectivejava.builder;
+package com.gujun.effectivejava.chapter1.builder;
 
 import org.junit.Test;
 
