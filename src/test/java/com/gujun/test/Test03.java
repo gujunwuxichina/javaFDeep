@@ -82,4 +82,16 @@ public class Test03 {
         System.out.println(end2 - endTime);
     }
 
+    @Test
+    public void test03(){
+        String s="0322";
+        System.out.println(22+s);
+    }
+
+    @Test
+    public void test04(){
+        String s="2202201";
+        System.out.println(s.substring(2));
+    }
+
 }

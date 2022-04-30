@@ -1,7 +1,7 @@
 package com.gujun.IO;
 
 import org.junit.Test;
-import sun.misc.BASE64Encoder;
+//import sun.misc.BASE64Encoder;
 
 import java.io.*;
 import java.net.URLEncoder;
@@ -63,16 +63,16 @@ public class FileTest {
 
     @Test
     public void fileToBase64() throws IOException {
-        File file=new File("timg.jpg");
-        InputStream inputStream=new FileInputStream(file);
-        byte[] bytes=new byte[(int) file.length()];
-        inputStream.read(bytes);
-        inputStream.close();
-        String base64_str=new BASE64Encoder().encode(bytes);
-        System.out.println(base64_str);
-        String urlencoder_str=URLEncoder.encode(base64_str,"UTF-8");
-        System.out.println("======================");
-        System.out.println(urlencoder_str);
+        //File file=new File("timg.jpg");
+        //InputStream inputStream=new FileInputStream(file);
+        //byte[] bytes=new byte[(int) file.length()];
+        //inputStream.read(bytes);
+        //inputStream.close();
+        //String base64_str=new BASE64Encoder().encode(bytes);
+        //System.out.println(base64_str);
+        //String urlencoder_str=URLEncoder.encode(base64_str,"UTF-8");
+        //System.out.println("======================");
+        //System.out.println(urlencoder_str);
     }
 
 }
