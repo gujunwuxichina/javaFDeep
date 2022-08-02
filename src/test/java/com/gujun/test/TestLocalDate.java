@@ -21,4 +21,11 @@ public class TestLocalDate {
         System.out.println(UUID.randomUUID().toString().replaceAll("-",""));
     }
 
+    @Test
+    public void test02(){
+        LocalDate now=LocalDate.now();
+        String month=now.format(DateTimeFormatter.ofPattern("yyyy-MM"));
+        System.out.println(month);
+    }
+
 }
